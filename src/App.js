@@ -1,14 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header";
+import Home from "./sections/Home";
+import About from "./sections/About";
+import Projects from "./sections/Projects";
+import Experience from "./sections/Experience";
+import Contact from "./sections/Contact";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1> Hello World </h1>
-        <p> This is my first webpage</p>
-      </header>
+    <div>
+      <Header />
+      <Home />
+      <About />
+      <Projects />
+      <Experience />
+      <Contact />
+
     </div>
   );
 }
