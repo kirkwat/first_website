@@ -32,7 +32,7 @@
     border: none;
 }
 
-.navContainer button::before{
+.navContainer button:not(.activeClass)::before{
     content: "";
     position: absolute;
     height: 1px;
@@ -45,6 +45,17 @@
     transform-origin: 0 100%;
 }
 
-.navContainer button:hover::before {
+.navContainer button:not(.activeClass):hover::before {
     transform: scale(1,1);
+}
+
+.navContainer button.activeClass::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background: #eaeaea;
+    bottom: -5px;
+    left: 0;
+
 }

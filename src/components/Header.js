@@ -1,15 +1,27 @@
+import { useContext } from 'react'
+import { NavContext } from '../context/NavContext'
 import styles from '../styles/Header.module.css'
 
 const Header = () => {
+    const {activeLinkId} = useContext(NavContext);
+    console.log(activeLinkId);
 
     const navLinks = ["Home","About","Projects","Experience","Contact"]
 
     const renderNavLink = (content) => {
+        const scrollToId = `${content.toLowerCase()}Section`;
+
+        const handleClicknav = () => {
+            document.getElementById(scrollToId).scrollIntoView({behavior: "smooth"})
+        }
 
         return (
             <ul key={content}>
                 <li>
-                    <button>{content}</button>
+                    <button onClick={handleClicknav} 
+                    className={activeLinkId === content ? styles.activeClass : ""}>
+                        {content}
+                    </button>
                 </li>
             </ul>
         )
