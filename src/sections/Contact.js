@@ -1,4 +1,5 @@
 import {useNav} from "../hooks/useNav"
+import ContactForm from "../components/ContactForm";
 
 const Contact = () => {
     const contactRef = useNav("Contact");
@@ -7,8 +8,11 @@ const Contact = () => {
         <section ref={contactRef} id="contactSection">
             <h2>Contact</h2>
             <p>
-                bunch of text
+                email me @ watson.kirk00@gmail.com
             </p>
+            <div>
+                <ContactForm/>
+            </div>
         </section>
     );
 }
