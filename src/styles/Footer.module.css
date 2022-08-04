@@ -44,10 +44,13 @@
   
 .socialMedia svg {
     margin-bottom: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    font-size: 50px;
     cursor: pointer;
+    font-size: 50px;
+    color: white;
+}
+
+.socialMedia button:hover::before{
+    color: "green";
 }
 
 @media only screen and (max-width: 600px) {
