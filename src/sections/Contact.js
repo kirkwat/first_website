@@ -6,10 +6,6 @@ const Contact = () => {
 
     return (
         <section ref={contactRef} id="contactSection">
-            <h2>Contact</h2>
-            <p>
-                email me @ watson.kirk00@gmail.com
-            </p>
             <div>
                 <ContactForm/>
             </div>
