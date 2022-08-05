@@ -8,7 +8,7 @@ import { makeStyles } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 
 //TODO
-  //have text clear after sending message
+  //have text clear after sending message and button change to sent
   //formatting
 
 const useStyles = makeStyles({
@@ -56,21 +56,6 @@ export const ContactForm = () => {
 
   return (
     <Container size="sm">
-      <Typography
-        variant="h2"
-        color="primary"
-        gutterBottom
-      >
-        Contact
-      </Typography>
-      <Typography
-        variant="h6" 
-        color="textSecondary"
-        gutterBottom
-      >
-        email me @ klwatson@smu.edu
-      </Typography>
-      
       <form noValidate ref={form} autoComplete="off" onSubmit={handleSubmit}>
         <TextField className={classes.field}
           onChange={(e) => setName(e.target.value)}

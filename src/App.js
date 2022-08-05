@@ -7,6 +7,9 @@ import Contact from "./sections/Contact";
 import NavProvider from "./context/NavContext";
 import Footer from "./components/Footer";
 
+//TODO
+  //have sections fitted to content on page
+
 function App() {
   return (
     <div>

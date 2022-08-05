@@ -6,9 +6,9 @@ import { Box, Container, makeStyles } from "@material-ui/core";
 
 //TO ADD
   //center icons
+  //enlage icons when hovering
   //formatting
   
-
   const useStyles = makeStyles({
     footer: {
       width: '100%',
@@ -18,7 +18,7 @@ import { Box, Container, makeStyles } from "@material-ui/core";
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      flexDirection: 'row',
+      flexDirection: 'row', //CHANGE?
     },
     btn: {
       fontSize: '50px',
@@ -37,7 +37,7 @@ function Footer() {
     <footer className={classes.footer}>
       <Box>
         <Container maxWidth="lg" >
-          <Box m="auto">
+          <Box>
             <IconButton
               className={classes.btn}
               onClick={event =>  window.location.href='https://github.com/kirkwat'}

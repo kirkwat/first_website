@@ -1,0 +1,31 @@
+{
+    "jobs": [
+      {
+        "title":"Technology Risk Intern",
+        "company":"Federal Reserve Bank of Dallas",
+        "date":"August 2021 - Present",
+        "location":"Dallas, Texas",
+        "image":"/img/fed_logo.jpg",
+        "description": [
+          "Conducted research and prepared reports on bank technology, digital payments, and cybersecurity emerging risks",
+          "Assisted in conducting IT, payments, and cybersecurity examinations of banks and/or service providers",
+          "Reviewed bank or service provider examination reports",
+          "Participated in supervisory and risk meetings and related organizational functions",
+          "Supported department management on special projects and other time-sensitive assignments"
+        ]
+      },
+      {
+        "title":"Quality Assurance Inspector",
+        "company":"All Plastics LLC",
+        "date":"December 2020 - January 2021",
+        "location":"San Antonio, Texas",
+        "image":"/img/all_plastics_logo.jpg",
+        "description": [
+          "Worked in a manufacturing facility that produces world class precision injection molding and assembly",
+          "Documented quality control for products that serve the medical, pharmaceutical, packaging, and industrial markets",
+          "Assured products met business fulfillment requirements for customers",
+          "Applied consistent & robust processes that improve quality of products and speed to market"
+        ]
+      }
+    ]
+  }
