@@ -1,31 +1,48 @@
 {
-    "jobs": [
-      {
-        "title":"Technology Risk Intern",
-        "company":"Federal Reserve Bank of Dallas",
-        "date":"August 2021 - Present",
-        "location":"Dallas, Texas",
-        "image":"/img/fed_logo.jpg",
-        "description": [
-          "Conducted research and prepared reports on bank technology, digital payments, and cybersecurity emerging risks",
-          "Assisted in conducting IT, payments, and cybersecurity examinations of banks and/or service providers",
-          "Reviewed bank or service provider examination reports",
-          "Participated in supervisory and risk meetings and related organizational functions",
-          "Supported department management on special projects and other time-sensitive assignments"
-        ]
-      },
-      {
-        "title":"Quality Assurance Inspector",
-        "company":"All Plastics LLC",
-        "date":"December 2020 - January 2021",
-        "location":"San Antonio, Texas",
-        "image":"/img/all_plastics_logo.jpg",
-        "description": [
-          "Worked in a manufacturing facility that produces world class precision injection molding and assembly",
-          "Documented quality control for products that serve the medical, pharmaceutical, packaging, and industrial markets",
-          "Assured products met business fulfillment requirements for customers",
-          "Applied consistent & robust processes that improve quality of products and speed to market"
-        ]
-      }
-    ]
-  }
+  "jobs": [
+    {
+      "title":"Technology Risk Intern",
+      "company":"Federal Reserve Bank of Dallas",
+      "date":"August 2021 - Present",
+      "location":"Dallas, Texas",
+      "image":"/img/fed_logo.jpg",
+      "description": [
+        "Conducted research and prepared reports on bank technology, digital payments, and cybersecurity emerging risks",
+        "Assisted in conducting IT, payments, and cybersecurity examinations of banks and/or service providers",
+        "Reviewed bank or service provider examination reports",
+        "Participated in supervisory and risk meetings and related organizational functions",
+        "Supported department management on special projects and other time-sensitive assignments"
+      ]
+    },
+    {
+      "title":"Quality Assurance Inspector",
+      "company":"All Plastics LLC",
+      "date":"December 2020 - January 2021",
+      "location":"San Antonio, Texas",
+      "image":"/img/all_plastics_logo.jpg",
+      "description": [
+        "Worked in a manufacturing facility that produces world class precision injection molding and assembly",
+        "Documented quality control for products that serve the medical, pharmaceutical, packaging, and industrial markets",
+        "Assured products met business fulfillment requirements for customers",
+        "Applied consistent & robust processes that improve quality of products and speed to market"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title":"Kick Covid in the _____.",
+      "image":"/img/fed_logo.jpg",
+      "description": "This is a COVID-19 Research Article Search Engine written in C++ and built using CMAKE that utilizes a self-implemented AVLTree for word storage and self-implemented HashTable for author storage. The documents are ranked by the term-frequency/inverse document frequency (tf/idf) metric and indexed with a command line user interface. After indexing, a user can enter a search query with multiple keywords and view statistics of the index."
+    },
+    {
+      "title":"Web3.py Eth Wallet Operator",
+      "image":"/img/all_plastics_logo.jpg",
+      "description": "This application connects a user to the Ethereum blockchain where they can view the ETH balance of any wallet address and send ETH transactions using their own wallet."
+    },
+    {
+      "title":"Flight Planner",
+      "image":"/img/all_plastics_logo.jpg",
+      "description": "This program determines all possible flight plans for a person wishing to travel between two different cities while accounting for time and costs. To perform an exhaustive search of all possible flights originating from a particular city, this program implements an iterative backtracking algorithm. This program utilizes the following self-implemented data structures: String, Stack, Linked List, and Adjacency List."
+    }
+  ]
+}

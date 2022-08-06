@@ -1,10 +1,11 @@
-import {useNav} from "../hooks/useNav"
+import {useNav} from "../hooks/useNav";
 import { Grid, Container, Typography } from "@material-ui/core";
-import ExperienceCard from '../components/ExperienceCards'
-import Data from '../data.json'
+import ExperienceCard from '../components/ExperienceCards';
+import Data from '../data.json';
 
 //TODO
-    //
+    //formatting
+        //have images move above text when screen is really small
 
 const Experience = () => {
     const experienceRef = useNav("Experience");

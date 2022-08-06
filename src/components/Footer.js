@@ -2,11 +2,9 @@ import React from "react";
 import IconButton from '@material-ui/core/IconButton';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import { Box, Container, makeStyles } from "@material-ui/core";
+import { makeStyles, Typography, List} from "@material-ui/core";
 
 //TO ADD
-  //center icons
-  //enlage icons when hovering
   //formatting
   
   const useStyles = makeStyles({
@@ -18,14 +16,14 @@ import { Box, Container, makeStyles } from "@material-ui/core";
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      flexDirection: 'row', //CHANGE?
+      flexDirection: 'column'
     },
     btn: {
       fontSize: '50px',
       color: 'white',
+      transform: 'scale(1)',
       '&:hover':{
-        //CHANGE COLOR
-        color: 'green',
+        transform: 'scale(1.25)'
       }
     },
   });
@@ -35,27 +33,23 @@ function Footer() {
 
   return (
     <footer className={classes.footer}>
-      <Box>
-        <Container maxWidth="lg" >
-          <Box>
-            <IconButton
-              className={classes.btn}
-              onClick={event =>  window.location.href='https://github.com/kirkwat'}
-            >
-              <GitHubIcon fontSize="inherit"/>
-            </IconButton>
-            <IconButton
-              className={classes.btn}
-              onClick={event =>  window.location.href='https://www.linkedin.com/in/kirk-watson/'}
-            >
-              <LinkedInIcon fontSize="inherit"/>
-            </IconButton>
-          </Box>
-          <Box>
+      <List spacing={2}>
+        <IconButton
+          className={classes.btn}
+          onClick={event =>  window.location.href='https://github.com/kirkwat'}
+        >
+          <GitHubIcon fontSize="inherit"/>
+        </IconButton>
+        <IconButton
+          className={classes.btn}
+          onClick={event =>  window.location.href='https://www.linkedin.com/in/kirk-watson/'}
+        >
+          <LinkedInIcon fontSize="inherit"/>
+        </IconButton>
+      </List>
+      <Typography align="center">
             Developed and Maintained by Kirk Watson
-          </Box>
-        </Container>
-      </Box>
+      </Typography>
     </footer>
   );
 }

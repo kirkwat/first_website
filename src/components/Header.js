@@ -4,7 +4,6 @@ import styles from '../styles/Header.module.css'
 
 const Header = () => {
     const {activeLinkId} = useContext(NavContext);
-    console.log(activeLinkId);
 
     const navLinks = ["Home","About","Projects","Experience","Contact"]
 
