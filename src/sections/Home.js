@@ -13,6 +13,20 @@ const useStyles = makeStyles({
       flexDirection: 'column',
       textAlign: 'center'
     },
+    text: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'left',
+        flexDirection: 'column',
+        textAlign: 'left'
+    },
+    education: {
+        display: 'flex',
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        flexDirection: 'row',
+        textAlign: 'left'
+    },
     media: {
       height: 200,
       width: 200,
@@ -28,7 +42,7 @@ const Home = () => {
         <section ref={homeRef} id="homeSection">
             <Container>
                 <Grid container spacing={3}>
-                    <Grid item md={4}>
+                    <Grid item xs={12} md={4}>
                         <Card elevation={0} className={classes.root}>
                             <CardMedia
                                 className={classes.media}
@@ -55,8 +69,8 @@ const Home = () => {
                             </CardActions>
                         </Card>
                     </Grid>
-                    <Grid item md={8}>
-                        <Card elevation={0}>
+                    <Grid item xs={12} md={8}>
+                        <Card elevation={0} className={classes.text}>
                             <Typography variant="h3" style={{fontWeight: 600}} component="div" gutterBottom>
                                 Biography
                             </Typography>
@@ -66,8 +80,8 @@ const Home = () => {
                         </Card>
                         <Container>
                             <Grid container spacing={3}>
-                                <Grid item xs={5}>
-                                    <Card elevation={0}>
+                                <Grid item xs={12} md={4}>
+                                    <Card elevation={0} className={classes.text}>
                                         <Typography variant="h5" style={{fontWeight: 600}} gutterBottom>
                                             Interests
                                         </Typography>
@@ -79,19 +93,35 @@ const Home = () => {
                                         </Typography>
                                     </Card>
                                 </Grid>
-                                <Grid item xs={7}>
+                                <Grid item xs={12} md={8}>
                                     <Typography variant="h5" style={{fontWeight: 600}} gutterBottom>
                                         Education
                                     </Typography>
                                     <List>
-                                        <Card>
+                                        <Card elevation={0} className={classes.education}>
                                             <SchoolRoundedIcon style={{ fontSize: 30 }}/>
                                             <CardHeader
-                                                title="B.S. in Computer Science, 2024 Expected"
+                                                titleTypographyProps={{variant:'h6'}}
+                                                title="B.S. in Computer Science, 2024 (Expected)"
                                                 subheader="Southern Methodist University"
                                             />
                                         </Card>
-
+                                        <Card elevation={0} className={classes.education}>
+                                            <SchoolRoundedIcon style={{ fontSize: 30 }}/>
+                                            <CardHeader
+                                                titleTypographyProps={{variant:'h6'}}
+                                                title="B.S. in Mathematics, 2024 (Expected)"
+                                                subheader="Southern Methodist University"
+                                            />
+                                        </Card>
+                                        <Card elevation={0} className={classes.education}>
+                                            <SchoolRoundedIcon style={{ fontSize: 30 }}/>
+                                            <CardHeader
+                                                titleTypographyProps={{variant:'h6'}}
+                                                title="Minor in Data Science, 2024 (Expected)"
+                                                subheader="Southern Methodist University"
+                                            />
+                                        </Card>
                                     </List>
                                 </Grid>
                             </Grid>
