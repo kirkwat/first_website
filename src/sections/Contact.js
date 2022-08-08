@@ -6,7 +6,7 @@ const Contact = () => {
     const contactRef = useNav("Contact");
 
     return (
-        <section ref={contactRef} id="contactSection">
+        <section ref={contactRef} id="contactSection"  className="secondary-section">
             <Typography
                 variant="h2"
                 color="textPrimary"

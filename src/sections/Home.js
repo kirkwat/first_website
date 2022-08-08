@@ -79,7 +79,7 @@ const Home = () => {
                             </Typography>
                         </Card>
                         <Container>
-                            <Grid container spacing={3}>
+                            <Grid container spacing={0}>
                                 <Grid item xs={12} md={4}>
                                     <Card elevation={0} className={classes.text}>
                                         <Typography variant="h5" style={{fontWeight: 600}} gutterBottom>

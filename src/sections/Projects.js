@@ -7,7 +7,7 @@ const Projects = () => {
     const projectsRef = useNav("Projects");
 
     return (
-        <section ref={projectsRef} id="projectsSection">
+        <section ref={projectsRef} id="projectsSection"  className="secondary-section">
             <Typography variant="h2" color="textPrimary">
                 Projects
             </Typography>

@@ -5,7 +5,7 @@ import styles from '../styles/Header.module.css'
 const Header = () => {
     const {activeLinkId} = useContext(NavContext);
 
-    const navLinks = ["Home","About","Projects","Experience","Contact"]
+    const navLinks = ["Home","Projects","Experience","Contact"]
 
     const renderNavLink = (content) => {
         const scrollToId = `${content.toLowerCase()}Section`;

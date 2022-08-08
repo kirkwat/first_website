@@ -11,7 +11,7 @@ const Experience = () => {
     const experienceRef = useNav("Experience");
 
     return (
-        <section ref={experienceRef} id="experienceSection" className="secondary-section">
+        <section ref={experienceRef} id="experienceSection">
             <Typography variant="h2" color="textPrimary">
                 Experience
             </Typography>
