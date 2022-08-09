@@ -1,4 +1,44 @@
 {
+  "school":"Southern Methodist University",
+  "occupation":"Undergraduate Student",
+  "biography":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  "interests": [
+    "Robotics",
+    "Artificial Intelligence",
+    "Human-Robot Interaction",
+    "Legged Locomotion"
+  ],
+  "degrees": [
+    {
+      "degree":"B.S. in Computer Science, 2024 (Expected)",
+      "school":"Southern Methodist University"
+    },
+    {
+      "degree":"B.S. in Mathematics, 2024 (Expected)",
+      "school":"Southern Methodist University"
+    },
+    {
+      "degree":"Minor in Data Science, 2024 (Expected)",
+      "school":"Southern Methodist University"
+    }
+  ],
+  "projects": [
+    {
+      "title":"Kick Covid in the _____.",
+      "image":"/img/fed_logo.jpg",
+      "description": "This is a COVID-19 Research Article Search Engine written in C++ and built using CMAKE that utilizes a self-implemented AVLTree for word storage and self-implemented HashTable for author storage. The documents are ranked by the term-frequency/inverse document frequency (tf/idf) metric and indexed with a command line user interface. After indexing, a user can enter a search query with multiple keywords and view statistics of the index."
+    },
+    {
+      "title":"Web3.py Eth Wallet Operator",
+      "image":"/img/all_plastics_logo.jpg",
+      "description": "This application connects a user to the Ethereum blockchain where they can view the ETH balance of any wallet address and send ETH transactions using their own wallet."
+    },
+    {
+      "title":"Flight Planner",
+      "image":"/img/all_plastics_logo.jpg",
+      "description": "This program determines all possible flight plans for a person wishing to travel between two different cities while accounting for time and costs. To perform an exhaustive search of all possible flights originating from a particular city, this program implements an iterative backtracking algorithm. This program utilizes the following self-implemented data structures: String, Stack, Linked List, and Adjacency List."
+    }
+  ],
   "jobs": [
     {
       "title":"Technology Risk Intern",
@@ -26,23 +66,6 @@
         "Assured products met business fulfillment requirements for customers",
         "Applied consistent & robust processes that improve quality of products and speed to market"
       ]
-    }
-  ],
-  "projects": [
-    {
-      "title":"Kick Covid in the _____.",
-      "image":"/img/fed_logo.jpg",
-      "description": "This is a COVID-19 Research Article Search Engine written in C++ and built using CMAKE that utilizes a self-implemented AVLTree for word storage and self-implemented HashTable for author storage. The documents are ranked by the term-frequency/inverse document frequency (tf/idf) metric and indexed with a command line user interface. After indexing, a user can enter a search query with multiple keywords and view statistics of the index."
-    },
-    {
-      "title":"Web3.py Eth Wallet Operator",
-      "image":"/img/all_plastics_logo.jpg",
-      "description": "This application connects a user to the Ethereum blockchain where they can view the ETH balance of any wallet address and send ETH transactions using their own wallet."
-    },
-    {
-      "title":"Flight Planner",
-      "image":"/img/all_plastics_logo.jpg",
-      "description": "This program determines all possible flight plans for a person wishing to travel between two different cities while accounting for time and costs. To perform an exhaustive search of all possible flights originating from a particular city, this program implements an iterative backtracking algorithm. This program utilizes the following self-implemented data structures: String, Stack, Linked List, and Adjacency List."
     }
   ]
 }

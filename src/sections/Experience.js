@@ -2,16 +2,28 @@ import {useNav} from "../hooks/useNav";
 import { Grid, Container, Typography } from "@material-ui/core";
 import ExperienceCard from '../components/ExperienceCards';
 import Data from '../data.json';
+import { makeStyles } from '@material-ui/styles';
 
 //TODO
     //formatting
         //have images move above text when screen is really small
 
+const useStyles = makeStyles({
+    primary_section: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: 'column',
+        height: '100vh',
+    }
+  })
+
 const Experience = () => {
+    const classes = useStyles();
     const experienceRef = useNav("Experience");
 
     return (
-        <section ref={experienceRef} id="experienceSection">
+        <section ref={experienceRef} id="experienceSection" className={classes.primary_section}>
             <Typography variant="h2" color="textPrimary">
                 Experience
             </Typography>

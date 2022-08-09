@@ -1,4 +1,5 @@
 import {useNav} from "../hooks/useNav";
+import Data from '../data.json';
 import { Typography, Grid, Container, Card, CardMedia, CardHeader, CardActions, IconButton, List } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -6,6 +7,13 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import SchoolRoundedIcon from '@material-ui/icons/SchoolRounded';
 
 const useStyles = makeStyles({
+    primary_section: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: 'column',
+        height: '100vh',
+    },
     root: {
       display: 'flex',
       justifyContent: 'space-between',
@@ -39,7 +47,7 @@ const Home = () => {
     const classes = useStyles();
     
     return (
-        <section ref={homeRef} id="homeSection">
+        <section ref={homeRef} id="homeSection" className={classes.primary_section}>
             <Container>
                 <Grid container spacing={3}>
                     <Grid item xs={12} md={4}>
@@ -54,10 +62,10 @@ const Home = () => {
                                 Kirk Watson
                             </Typography>
                             <Typography variant="h6" component="div" color="textSecondary">
-                                Undergraduate Student
+                                {Data.occupation}
                             </Typography>
                             <Typography variant="h6" component="div" gutterBottom>
-                                Southern Methodist University
+                                {Data.school}
                             </Typography>
                             <CardActions>
                                 <IconButton size="small" >
@@ -75,7 +83,7 @@ const Home = () => {
                                 Biography
                             </Typography>
                             <Typography variant="h6" gutterBottom>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                {Data.biography}
                             </Typography>
                         </Card>
                         <Container>
@@ -86,10 +94,9 @@ const Home = () => {
                                             Interests
                                         </Typography>
                                         <Typography variant="h6" component="div">
-                                            <li>Robotics</li>
-                                            <li>Artificial Intelligence</li>
-                                            <li>Human-Robot Interaction</li>
-                                            <li>Legged Locomotion</li>
+                                            {Data.interests.map(interests => (
+                                                <li>{interests}</li>
+                                            ))}
                                         </Typography>
                                     </Card>
                                 </Grid>
@@ -98,30 +105,16 @@ const Home = () => {
                                         Education
                                     </Typography>
                                     <List>
-                                        <Card elevation={0} className={classes.education}>
+                                        {Data.degrees.map(degrees => (
+                                            <Card elevation={0} className={classes.education}>
                                             <SchoolRoundedIcon style={{ fontSize: 30 }}/>
                                             <CardHeader
                                                 titleTypographyProps={{variant:'h6'}}
-                                                title="B.S. in Computer Science, 2024 (Expected)"
-                                                subheader="Southern Methodist University"
+                                                title={degrees.degree}
+                                                subheader={degrees.school}
                                             />
-                                        </Card>
-                                        <Card elevation={0} className={classes.education}>
-                                            <SchoolRoundedIcon style={{ fontSize: 30 }}/>
-                                            <CardHeader
-                                                titleTypographyProps={{variant:'h6'}}
-                                                title="B.S. in Mathematics, 2024 (Expected)"
-                                                subheader="Southern Methodist University"
-                                            />
-                                        </Card>
-                                        <Card elevation={0} className={classes.education}>
-                                            <SchoolRoundedIcon style={{ fontSize: 30 }}/>
-                                            <CardHeader
-                                                titleTypographyProps={{variant:'h6'}}
-                                                title="Minor in Data Science, 2024 (Expected)"
-                                                subheader="Southern Methodist University"
-                                            />
-                                        </Card>
+                                            </Card>
+                                        ))}
                                     </List>
                                 </Grid>
                             </Grid>

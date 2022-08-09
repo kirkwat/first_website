@@ -1,8 +1,28 @@
 import { useContext } from 'react'
 import { NavContext } from '../context/NavContext'
 import styles from '../styles/Header.module.css'
+import AppBar from '@material-ui/core/AppBar'
+import Toolbar from '@material-ui/core/Toolbar'
+import { Container} from '@material-ui/core';
+import { makeStyles } from '@material-ui/styles';
+
+const useStyles = makeStyles({
+    header: {
+        background: '#222',
+        color: '#fff',
+        padding: '1rem',
+        position: 'fixed',
+        width: '100%',
+        display: 'flex;',
+    },
+    container: {
+        maxWidth: '1200px',
+        margin: 'auto',
+    }
+  })
 
 const Header = () => {
+    const classes = useStyles();
     const {activeLinkId} = useContext(NavContext);
 
     const navLinks = ["Home","Projects","Experience","Contact"]
@@ -27,15 +47,15 @@ const Header = () => {
     }
 
     return (
-        <header className={styles.header}>
-            <div className={styles.container}>
-                <div className={styles.navContainer}>
+        <AppBar className={classes.header}>
+            <Toolbar className={classes.container}>
+                <Container className={styles.navContainer}>
                     <nav>
                         {navLinks.map(nav => renderNavLink(nav))}
                     </nav>
-                </div>
-            </div>
-        </header>
+                </Container>
+            </Toolbar>
+        </AppBar>
     )
 }
 
