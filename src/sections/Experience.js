@@ -14,7 +14,7 @@ const useStyles = makeStyles({
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
-        height: '100vh',
+        height: 'auto',
     }
   })
 

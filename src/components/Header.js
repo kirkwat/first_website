@@ -8,9 +8,8 @@ import { makeStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles({
     header: {
-        background: '#222',
-        color: '#fff',
-        padding: '1rem',
+        background: '#fff',
+        color: 'black',
         position: 'fixed',
         width: '100%',
         display: 'flex;',

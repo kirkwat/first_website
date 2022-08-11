@@ -11,7 +11,7 @@ const useStyles = makeStyles({
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
-        height: '100vh',
+        padding: '80px'
     }
   })
 

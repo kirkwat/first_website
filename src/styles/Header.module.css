@@ -13,7 +13,7 @@
     position: relative;
     font-size: 1rem;
     cursor: pointer;
-    color: #eaeaea;
+    color: #000000;
     background: none;
     border: none;
 }
@@ -23,7 +23,7 @@
     position: absolute;
     height: 1px;
     width: 100%;
-    background-color: #eaeaea;
+    background-color: #000000;
     left: 0;
     bottom: -5px;
     transform: scale(0, 1);
@@ -40,7 +40,7 @@
     position: absolute;
     height: 1px;
     width: 100%;
-    background: #eaeaea;
+    background: #000000;
     bottom: -5px;
     left: 0;
     transition: transform 0.25s ease-in-out;

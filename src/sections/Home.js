@@ -12,14 +12,16 @@ const useStyles = makeStyles({
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
-        height: '100vh',
+        marginTop: '130px',
+        marginBottom: '150px'
     },
-    root: {
+    card: {
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
       flexDirection: 'column',
-      textAlign: 'center'
+      textAlign: 'center',
+      margin: '0px'
     },
     text: {
         display: 'flex',
@@ -33,12 +35,14 @@ const useStyles = makeStyles({
         justifyContent: 'flex-start',
         alignItems: 'center',
         flexDirection: 'row',
-        textAlign: 'left'
+        textAlign: 'left',
+        margin: '0px'
     },
     media: {
       height: 200,
       width: 200,
-      borderRadius: '50%'
+      borderRadius: '50%',
+      marginBottom: '15px'
     }
 })
 
@@ -48,10 +52,10 @@ const Home = () => {
     
     return (
         <section ref={homeRef} id="homeSection" className={classes.primary_section}>
-            <Container>
+            <Container style={{paddingLeft: '40px', paddingRight: '40px'}}>
                 <Grid container spacing={3}>
                     <Grid item xs={12} md={4}>
-                        <Card elevation={0} className={classes.root}>
+                        <Card elevation={0} className={classes.card}>
                             <CardMedia
                                 className={classes.media}
                                 component="img"
@@ -86,14 +90,14 @@ const Home = () => {
                                 {Data.biography}
                             </Typography>
                         </Card>
-                        <Container>
-                            <Grid container spacing={0}>
+                        <Container style={{paddingLeft: '0px', paddingRight: '0px'}}>
+                            <Grid container spacing={5}>
                                 <Grid item xs={12} md={4}>
                                     <Card elevation={0} className={classes.text}>
-                                        <Typography variant="h5" style={{fontWeight: 600}} gutterBottom>
+                                        <Typography variant="h5" style={{paddingTop: '35px', fontWeight: 600}} gutterBottom>
                                             Interests
                                         </Typography>
-                                        <Typography variant="h6" component="div">
+                                        <Typography variant="h6" component="div" style={{fontSize: 18}}>
                                             {Data.interests.map(interests => (
                                                 <li>{interests}</li>
                                             ))}
@@ -101,18 +105,19 @@ const Home = () => {
                                     </Card>
                                 </Grid>
                                 <Grid item xs={12} md={8}>
-                                    <Typography variant="h5" style={{fontWeight: 600}} gutterBottom>
+                                    <Typography variant="h5" style={{paddingTop: '35px', fontWeight: 600}}>
                                         Education
                                     </Typography>
-                                    <List>
+                                    <List style={{padding: '0px'}}>
                                         {Data.degrees.map(degrees => (
                                             <Card elevation={0} className={classes.education}>
-                                            <SchoolRoundedIcon style={{ fontSize: 30 }}/>
-                                            <CardHeader
-                                                titleTypographyProps={{variant:'h6'}}
-                                                title={degrees.degree}
-                                                subheader={degrees.school}
-                                            />
+                                                <SchoolRoundedIcon style={{ fontSize: 30 }}/>
+                                                <CardHeader
+                                                    style={{padding: '5px 10px'}}
+                                                    titleTypographyProps={{variant:'h6'}}
+                                                    title={degrees.degree}
+                                                    subheader={degrees.school}
+                                                />
                                             </Card>
                                         ))}
                                     </List>
