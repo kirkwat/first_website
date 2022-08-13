@@ -1,11 +1,8 @@
 import React from 'react'
-import { Card,CardMedia,CardContent,CardActions,Typography, Button} from '@material-ui/core';
+import { Card,CardMedia, Box,CardContent,CardActions,Typography, Button} from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import { makeStyles } from '@material-ui/styles';
-
-//TODO
-    //formatting
 
 const useStyles = makeStyles({
   root: {
@@ -17,7 +14,16 @@ const useStyles = makeStyles({
   media: {
     height: 200,
     width: 200
-  }
+  },
+  button: {
+    color: '#2963FF',
+    backgroundColor: '#FFFFFF',
+    borderColor: '#2963FF',
+    '&:hover':{
+      backgroundColor: '#2963FF',
+      color: '#FFFFFF'
+    }
+  },
 })
 
 export default function ProjectCard({ project }) {
@@ -41,14 +47,24 @@ export default function ProjectCard({ project }) {
           </Typography>
         </CardContent>
         <CardActions>
-            <Button size="small">
-                <GitHubIcon fontSize="medium"/>
-                See Code
-            </Button>
-            <Button size="small">
-                <YouTubeIcon fontSize="medium"/>
-                View Demo
-            </Button>
+          <Button variant="outlined"
+            size="small"
+            justify="center"
+            className={classes.button}
+            endIcon={<GitHubIcon/>}
+            onClick={event =>  window.location.href=project.github}
+          >
+            See Code
+          </Button>
+          <Button variant="outlined"
+            size="small"
+            justify="center"
+            className={classes.button}
+            endIcon={<YouTubeIcon/>}
+            onClick={event =>  window.location.href=project.youtube}
+          >
+              View Demo
+          </Button>
         </CardActions>
       </Card>
     </div>

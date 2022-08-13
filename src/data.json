@@ -26,16 +26,22 @@
     {
       "title":"Kick Covid in the _____.",
       "image":"/img/fed_logo.jpg",
+      "github":"https://github.com/kirkwat/search-engine",
+      "youtube":"https://www.youtube.com/",
       "description": "This is a COVID-19 Research Article Search Engine written in C++ and built using CMAKE that utilizes a self-implemented AVLTree for word storage and self-implemented HashTable for author storage. The documents are ranked by the term-frequency/inverse document frequency (tf/idf) metric and indexed with a command line user interface. After indexing, a user can enter a search query with multiple keywords and view statistics of the index."
     },
     {
       "title":"Web3.py Eth Wallet Operator",
       "image":"/img/all_plastics_logo.jpg",
+      "github":"https://github.com/kirkwat/eth-wallet-operator",
+      "youtube":"https://www.youtube.com/",
       "description": "This application connects a user to the Ethereum blockchain where they can view the ETH balance of any wallet address and send ETH transactions using their own wallet."
     },
     {
       "title":"Flight Planner",
       "image":"/img/all_plastics_logo.jpg",
+      "github":"https://github.com/kirkwat/flight-planner",
+      "youtube":"https://www.youtube.com/",
       "description": "This program determines all possible flight plans for a person wishing to travel between two different cities while accounting for time and costs. To perform an exhaustive search of all possible flights originating from a particular city, this program implements an iterative backtracking algorithm. This program utilizes the following self-implemented data structures: String, Stack, Linked List, and Adjacency List."
     }
   ],

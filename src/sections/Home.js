@@ -1,6 +1,6 @@
 import {useNav} from "../hooks/useNav";
 import Data from '../data.json';
-import { Typography, Grid, Container, Card, CardMedia, CardHeader, CardActions, IconButton, List } from '@material-ui/core';
+import { Typography, Grid, Container, Button, Card, CardMedia, CardHeader, CardActions, IconButton, List } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
@@ -44,10 +44,26 @@ const useStyles = makeStyles({
         margin: '0px',
     },
     media: {
-      height: 250,
-      width: 250,
+      height: 225,
+      width: 225,
       borderRadius: '50%',
       marginBottom: '15px'
+    },
+    btn: {
+        fontSize: '2.25rem',
+        color: '#2963FF',
+        transform: 'scale(1)',
+        '&:hover':{
+          transform: 'scale(1.25)'
+        }
+      },
+    school_btn: {
+        color: '#2963FF',
+        cursor: 'pointer',
+        textTransform: "none",
+        '&:hover':{
+            textDecoration: 'underline'
+        }
     }
 })
 
@@ -73,15 +89,27 @@ const Home = () => {
                             <Typography variant="h6" component="div" color="textSecondary">
                                 {Data.occupation}
                             </Typography>
-                            <Typography variant="h6" component="div" gutterBottom>
+                            <Typography 
+                                className={classes.school_btn}
+                                variant="h6"
+                                component="div"
+                                onClick={event =>  window.location.href='https://www.smu.edu/'}
+                                gutterBottom
+                            >
                                 {Data.school}
                             </Typography>
                             <CardActions>
                                 <IconButton size="small" >
-                                    <GitHubIcon fontSize="large"/>
+                                    <GitHubIcon
+                                        className={classes.btn}
+                                        onClick={event =>  window.location.href='https://github.com/kirkwat'}
+                                    />
                                 </IconButton>
                                 <IconButton size="small">
-                                    <LinkedInIcon fontSize="large"/>
+                                    <LinkedInIcon 
+                                        className={classes.btn}
+                                        onClick={event =>  window.location.href='https://www.linkedin.com/in/kirk-watson/'}
+                                    />
                                 </IconButton>
                             </CardActions>
                         </Card>
@@ -96,7 +124,7 @@ const Home = () => {
                             </Typography>
                         </Card>
                         <Container style={{paddingLeft: '0px', paddingRight: '0px'}}>
-                            <Grid container spacing={5}>
+                            <Grid container spacing={7}>
                                 <Grid item xs={12} sm={4} style={{paddingTop: '55px', paddingBottom: '0px', paddingRight: '0px'}}>
                                     <Card elevation={0} className={classes.text}>
                                         <Typography variant="h5" style={{fontWeight: 600}} gutterBottom>
@@ -139,23 +167,3 @@ const Home = () => {
 }
 
 export default Home
-
-
-/*
-<Typography variant="h5" style={{fontWeight: 600}}>
-                                        Education
-                                    </Typography>
-                                    <List style={{padding: '0px'}}>
-                                        {Data.degrees.map(degrees => (
-                                            <Card elevation={1} className={classes.education}>
-                                                <SchoolRoundedIcon style={{ fontSize: 30 }}/>
-                                                <CardHeader
-                                                    style={{padding: '5px 10px'}}
-                                                    titleTypographyProps={{variant:'h6'}}
-                                                    title={degrees.degree}
-                                                    subheader={degrees.school}
-                                                />
-                                            </Card>
-                                        ))}
-                                    </List>
-*/
