@@ -12,10 +12,12 @@ import TextField from '@material-ui/core/TextField';
   //formatting
 
 const useStyles = makeStyles({
+
   field: {
     marginTop: 20,
     marginBottom: 20,
-    display: 'block'
+    display: 'block',
+    maxWidth: '750px'
   }
 });
 
@@ -55,7 +57,7 @@ export const ContactForm = () => {
   }
 
   return (
-    <Container size="sm">
+    <Container size="sm" className={classes.field}>
       <form noValidate ref={form} autoComplete="off" onSubmit={handleSubmit}>
         <TextField className={classes.field}
           onChange={(e) => setName(e.target.value)}

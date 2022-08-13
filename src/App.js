@@ -5,21 +5,24 @@ import Experience from "./sections/Experience";
 import Contact from "./sections/Contact";
 import NavProvider from "./context/NavContext";
 import Footer from "./components/Footer";
+import {createTheme, ThemeProvider, responsiveFontSizes} from '@material-ui/core';
 
-//TODO
-  //have sections fitted to content on page
+let theme = createTheme();
+theme = responsiveFontSizes(theme);
 
 function App() {
   return (
     <div>
-      <NavProvider>
-        <Header />
-        <Home />
-        <Projects />
-        <Experience />
-        <Contact />
-      </NavProvider>
-      <Footer />
+      <ThemeProvider theme={theme}>
+        <NavProvider>
+          <Header />
+          <Home />
+          <Projects />
+          <Experience />
+          <Contact />
+        </NavProvider>
+        <Footer />
+    </ThemeProvider>
     </div>
   );
 };

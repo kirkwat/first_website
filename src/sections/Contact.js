@@ -5,12 +5,13 @@ import { makeStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles({
     secondary_section: {
-        background: '#b5b5b5',
+        background: '#F7F7F7',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
-        height: 'auto',
+        paddingTop: '15%',
+        paddingBottom: '15%'
     }
   })
 
