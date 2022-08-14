@@ -29,7 +29,7 @@ export default function ExperienceeCard({ experience }) {
 
   return (
     <div>
-      <Card elevation={5} className={classes.root}>
+      <Card elevation={1} className={classes.root}>
         <CardContent>
           <Typography variant="h6" color="textPrimary" style={{fontWeight: 600}} >
             {experience.title}

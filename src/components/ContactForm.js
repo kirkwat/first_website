@@ -1,15 +1,10 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import { makeStyles } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
-
-//TODO
-  //have text clear after sending message and button change to sent
-  //formatting
 
 const useStyles = makeStyles({
 
@@ -17,7 +12,17 @@ const useStyles = makeStyles({
     marginTop: 20,
     marginBottom: 20,
     display: 'block',
-    maxWidth: '750px'
+    maxWidth: '650px'
+  },
+  button: {
+    color: '#2963FF',
+    backgroundColor: '#F7F7F7',
+    borderColor: '#2963FF',
+    marginBottom: '16px',
+    '&:hover':{
+      backgroundColor: '#2963FF',
+      color: '#F7F7F7'
+    }
   }
 });
 
@@ -63,7 +68,6 @@ export const ContactForm = () => {
           onChange={(e) => setName(e.target.value)}
           label="Name" 
           variant="outlined" 
-          color="secondary"
           name="user_name"
           fullWidth
           required
@@ -73,7 +77,6 @@ export const ContactForm = () => {
           onChange={(e) => setEmail(e.target.value)}
           label="Email" 
           variant="outlined" 
-          color="secondary" 
           name="user_email"
           fullWidth
           required
@@ -83,18 +86,19 @@ export const ContactForm = () => {
           onChange={(e) => setMessage(e.target.value)}
           label="Message"
           variant="outlined"
-          color="secondary"
           name="message"
           multiline
-          rows={4}
+          rows={8}
           fullWidth
           required
           error={messageError}
         />
         <Button
-          type="submit" 
-          color="secondary" 
-          variant="contained"
+          type="submit"
+          variant="outlined"
+          size="small"
+          justify="center"
+          className={classes.button}
           endIcon={<KeyboardArrowRightIcon />}>
           Submit
         </Button>

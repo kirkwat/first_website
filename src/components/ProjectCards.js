@@ -66,7 +66,8 @@ export default function ProjectCard({ project }) {
           >
             Code
           </Button>
-          <Button variant="outlined"
+          <Button 
+            variant="outlined"
             size="small"
             justify="center"
             className={classes.button}

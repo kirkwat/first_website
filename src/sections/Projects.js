@@ -5,7 +5,6 @@ import Data from '../data.json';
 import { makeStyles } from '@material-ui/styles';
 
 //TODO
-    //improve responsiveness with images
     //have cards be centered when changing screen size
 
 const useStyles = makeStyles({

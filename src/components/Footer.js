@@ -5,22 +5,21 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import { makeStyles, Typography, List} from "@material-ui/core";
 
 //TO ADD
-  //formatting
+  //back to top scroll button
   
   const useStyles = makeStyles({
     footer: {
       width: '100%',
-      padding: '1rem',
-      backgroundColor: '#222',
-      color: 'white',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      flexDirection: 'column'
+      flexDirection: 'column',
+      paddingTop: '10px',
+      paddingBottom: '25px'
     },
     btn: {
-      fontSize: '50px',
-      color: 'white',
+      fontSize: '2.5rem',
+      color: '#2963FF',
       transform: 'scale(1)',
       '&:hover':{
         transform: 'scale(1.25)'
@@ -47,7 +46,7 @@ function Footer() {
           <LinkedInIcon fontSize="inherit"/>
         </IconButton>
       </List>
-      <Typography align="center">
+      <Typography color="textSecondary" align="center">
             Developed and Maintained by Kirk Watson
       </Typography>
     </footer>
