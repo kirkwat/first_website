@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card,CardMedia, Box,CardContent,CardActions,Typography, Button} from '@material-ui/core';
+import { Card,CardMedia, CardContent,CardActions,Typography, Button} from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import { makeStyles } from '@material-ui/styles';
@@ -10,15 +10,26 @@ const useStyles = makeStyles({
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'column',
+    textAlign: 'center'
   },
   media: {
-    height: 200,
-    width: 200
+    height: '50%',
+    width: 300,
+    borderRadius: '25px',
+    objectFit: 'cover',
+    marginTop: '30px',
+    marginLeft: '30px',
+    marginRight: '30px'
+  },
+  title: {
+    marginBottom: '16px',
+    fontWeight: 600
   },
   button: {
     color: '#2963FF',
     backgroundColor: '#FFFFFF',
     borderColor: '#2963FF',
+    marginBottom: '16px',
     '&:hover':{
       backgroundColor: '#2963FF',
       color: '#FFFFFF'
@@ -39,10 +50,10 @@ export default function ProjectCard({ project }) {
           alt={project.title}
         />
         <CardContent>
-          <Typography variant="body2" color="textPrimary">
+          <Typography variant="h6" color="textPrimary" className={classes.title}>
             {project.title}
           </Typography>
-          <Typography variant="body2" color="textSecondary">
+          <Typography variant="body1" color="textSecondary">
             {project.description}
           </Typography>
         </CardContent>
@@ -54,7 +65,7 @@ export default function ProjectCard({ project }) {
             endIcon={<GitHubIcon/>}
             onClick={event =>  window.location.href=project.github}
           >
-            See Code
+            Code
           </Button>
           <Button variant="outlined"
             size="small"
@@ -63,7 +74,7 @@ export default function ProjectCard({ project }) {
             endIcon={<YouTubeIcon/>}
             onClick={event =>  window.location.href=project.youtube}
           >
-              View Demo
+            Demo
           </Button>
         </CardActions>
       </Card>

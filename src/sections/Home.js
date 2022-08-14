@@ -16,7 +16,7 @@ const useStyles = makeStyles({
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
-        marginTop: '130px',
+        marginTop: '150px',
         marginBottom: '15%'
     },
     card: {
@@ -26,6 +26,7 @@ const useStyles = makeStyles({
       flexDirection: 'column',
       textAlign: 'center',
       margin: '0px',
+      paddingTop: '20px',
       paddingBottom: '25px'
     },
     text: {
