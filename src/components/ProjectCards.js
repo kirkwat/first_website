@@ -10,16 +10,15 @@ const useStyles = makeStyles({
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'column',
-    textAlign: 'center'
+    textAlign: 'center',
+    borderRadius: '20px',
   },
   media: {
     height: '50%',
     width: 300,
-    borderRadius: '25px',
+    borderRadius: '20px',
     objectFit: 'cover',
-    marginTop: '30px',
-    marginLeft: '30px',
-    marginRight: '30px'
+    marginTop: '30px'
   },
   title: {
     marginBottom: '16px',

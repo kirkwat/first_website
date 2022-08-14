@@ -7,7 +7,7 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import SchoolRoundedIcon from '@material-ui/icons/SchoolRounded';
 
 //TODO
-    //indent second line of interest bullet points
+    //use padding+margin to lower home from navbar
     //organize and clean style objects and styles
 
 const useStyles = makeStyles({
@@ -132,9 +132,11 @@ const Home = () => {
                                             Interests
                                         </Typography>
                                         <Typography variant="h6" component="div">
-                                            {Data.interests.map(interests => (
-                                                <li style={{fontSylePosition: 'outside'}}>{interests}</li>
-                                            ))}
+                                            <ul>
+                                                {Data.interests.map(interests => (
+                                                    <li style={{fontSylePosition: 'outside'}}>{interests}</li>
+                                                ))}
+                                            </ul>
                                         </Typography>
                                     </Card>
                                 </Grid>

@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/styles';
 
 //TODO
     //improve responsiveness with images
+    //have cards be centered when changing screen size
 
 const useStyles = makeStyles({
     secondary_section: {
@@ -19,9 +20,6 @@ const useStyles = makeStyles({
     title: {
         paddingTop: '15%',
         paddingBottom: '.5%'
-    },
-    subtitle: {
-        paddingBottom: '3%'
     },
     divider: {
         height: '3px',
@@ -40,14 +38,14 @@ const Projects = () => {
             <Typography variant="h3" color="textPrimary" className={classes.title}>
                 Projects
             </Typography>
-            <Typography variant="h6" color="textSecondary" >
+            <Typography variant="h6" color="textSecondary">
                 Take a look at some projects that I have been working on!
             </Typography>
             <Divider variant="middle" className={classes.divider}/>
             <Container>
                 <Grid container spacing={4}>
                     {Data.projects.map(project => (
-                        <Grid item sm={6} md={4} key={project.id}>
+                        <Grid item sm={6} md={4} style={{minWidth: 350}} key={project.id}>
                             <ProjectCard project={project} />
                         </Grid>
                     ))}
