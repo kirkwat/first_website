@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# My First Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a work in progress and is where I experiment and learn with React, JavaScript, CSS, and HTML.
 
 ## Available Scripts
 
